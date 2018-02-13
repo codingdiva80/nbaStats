@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NBA Stats</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/flexboxgrid.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
+  <!-- Moment.js Reference -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+
+<body>
+	<!-- HEADER -->
+	<div id="wrapper">
+	<header id="main-header">
+		<div class="container"> 
+			<div class="row end-sm end-md end-lg center-xs middle-xs middle-sm middle-md middle-lg">
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"></div>
+				<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">	
+					<nav id="navbar">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li class="current"><a href="stats.html">Stats</a></li>
+							<li id="signup"><a href="signup">Signup</a></li>
+							<li id="login-link"><a href="login">Login</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>			
+		</div>
+	</header>
+
+	<!-- Player Info -->
+	<section id="playerStats">
+		<div id="statistics">
+			<h1 id="currentChart">Points</h1>
+			<div class="row">
+				<canvas id="myChart" height="400px" width="600px"></canvas>
+			</div>
+			<div id="secondSearch">Search Players</div>
+			<div id="playerChooser">
+				<!-- ADD SEARCH FUNCTIONALITY HERE -->
+				<form>
+					<input id="playerSelect" list="browsers">
+						<select id="browsers"></select>
+				</form>
+			</div>
+			<div id="playerChooser2">
+				<!-- ADD SEARCH FUNCTIONALITY HERE -->
+				<form>
+					<input id="playerSelect2" list="browsers2">
+						<select id="browsers2"></select>
+				</form>
+			</div>
+			<button id="submitForm">Select Player</button>
+		</div>
+		<div id="info-div">
+			<div id='playerPage'>				
+				<div id="player1-info-div">
+					<div id="player1-name"></div>
+					<div id="player1-age"></div>
+					<div id="player1-birthDate"></div>
+					<div id="player1-birthCountry"></div>
+					<div id="player1-height"></div>
+					<div id="player1-weight"></div>
+					<div id="player1-position"></div>
+				</div>
+				<div id="player2-info-div">
+					<div id="player2-name"></div>
+					<div id="player2-age"></div>
+					<div id="player2-birthDate"></div>
+					<div id="player2-birthCountry"></div>
+					<div id="player2-height"></div>
+					<div id="player2-weight"></div>
+					<div id="player2-position"></div>
+				</div>
+			</div>
+			<div id="points-div">
+				<button class="graphController">Points</button>
+				<button class="graphController">Rebounds</button>
+				<button class="graphController">Assists</button>
+				<button class="graphController">Steals</button>
+				<button class="graphController">Blocks</button>
+			</div>
+		</div>		
+	</section>
+	
+	<!-- FOOTER -->
+	<footer id="main-footer">
+		<p>Copyright &copy; 2018 | NBA Stats</p>
+	</footer>
+
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  	<!-- <script type="text/javascript" src="assets/js/main.js"></script> -->
+	<script type="text/javascript" src="assets/js/account.js"></script>
+	<script type="text/javascript" src="./assets/js/playerNames.js"></script>
+
+	<script type="text/javascript">
+		//instance of the main object
+		function signupHTML(success) {
+			if(success){
+				$("#signup").html('<a href="/account">Account</a>');
+				$("#login-link").html('<a href="/logout">Logout</a>');
+			}
+		};
+		var user = new Account();
+		user.checkLoginStatus(signupHTML);
+	</script>
+	<script type="text/javascript" src="assets/js/nba_stats_api.js"></script>
+	  	<script type="text/javascript" src="assets/js/main.js"></script>
+
+	<script type="text/javascript">
+		var nbaStatsAPI = new NbaStatsAPI();
+		nbaStatsAPI.displayScores('scores-div');
+	</script>
+	</div>
+</body>
+</html>

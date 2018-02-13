@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NBA Stats | Contact</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/flexboxgrid.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	 <!-- jQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<div id="wrapper">
+	<!-- HEADER -->
+	<header id="main-header">
+		<div class="container"> 
+			<div class="row end-sm end-md end-lg center-xs middle-xs middle-sm middle-md middle-lg">
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+				</div>
+
+				<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">	
+					<nav id="navbar">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="stats.html">Stats</a></li>
+							<li class="current"><a href="account.html">My Account</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>			
+		</div>
+	</header>
+
+	<!-- Creating a new account -->
+	<section id="page" class="contact">
+		<div class="signup-container">
+			<form action="/action_page.php" class="signup-form" style="border:1px solid #ccc">
+				<label><b>Email</b></label>
+				<input type="text" placeholder="Enter Email" id="email" autofocus name="email" required>
+
+				<label><b>Password</b></label>
+				<input type="password" placeholder="Enter Password" id="password" name="psw" required>
+
+				<label><b>Repeat Password</b></label>
+				<input type="password" placeholder="Repeat Password" id="repeat_password" name="psw-repeat" required>
+				<div class="clearfix">
+					<button type="submit" id="signupbtn">Sign Up</button>
+				</div>
+				<p id="login-text">Already have an account? <span><a href="login.html" id="login">Log in!</a></span></p>
+			</form>
+		</div>
+	</section>
+	<!-- Generating a modal window after sign up -->
+	<section id="modal">
+		<div class="container">
+			<div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div id="myModal" class="modal">
+						<!-- Modal content -->
+						<div class="modal-content">
+							<span class="close">&times;</span>
+							<div>
+								<h1>Welcome!</h1> 
+								<h2>What would you like to do next?</h2>
+								<button type="button" id="gohomebtn">Go to Home Page</button>
+								<button type="submit" id="searchbtn">Search</button>
+							</div>								
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</section>
+
+	<!-- Generating a modal window if search button is selected -->
+	<section id="modal">
+		<div class="container">
+			<div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div id="searchModal" class="modal">
+						<!-- Modal content -->
+						<div class="search-modal-content">
+							<span class="close-search">&times;</span>
+							<div>
+								<h1>Search</h1> 
+								<form>
+									<input type="text" name="email" placeholder="Please enter team or player name" id="search-input">
+									<button type="submit" id="searchbtn">Search</button>
+								</form>
+							</div>								
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</section>
+	<!-- FOOTER -->
+	<footer id="main-footer">
+		<p>Copyright &copy; 2018 | NBA Stats</p>
+	</footer>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+	<script  src="assets/js/account.js"></script>
+	<script  src="assets/js/main.js"></script>
+	<script>newAccount()</script>
+	</div>
+</body>
+</html>

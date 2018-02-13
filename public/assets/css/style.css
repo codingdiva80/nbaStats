@@ -1,0 +1,490 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: "Open-sans", sans-serif;
+	font-size: 17px;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+img {
+	width: 100%;
+}
+
+/* COMMON CLASSES */
+.primary-text {
+	color: white;  	
+}
+.primary-background {
+	color: #FFA500;
+}
+
+/* HEADER */
+#main-header {
+	border-bottom: 1px solid black;
+	background-color: #000066; 
+}
+
+/* NAVBAR */
+#navbar {
+	text-transform: uppercase;
+}
+#navbar li {
+	display: inline;
+	padding-right: 20px;
+	list-style: none;
+	align-items: right;
+}
+#navbar a {
+	text-decoration: none;
+	color: grey;	
+}
+#navbar li.current a, #navbar a:hover {
+	color: white;
+	border-bottom: 3px solid #FFA500; 
+	padding-bottom: 3px;
+}
+#searchBar {
+	font-family: "Open-sans", sans-serif;
+	width: 195px;
+	height: 28px;
+	font-size: 14.5px;
+}
+
+/* SHOWCASE */
+h1 {
+	color: #FFA500;
+}
+#showcase {
+	background: url("../images/basketball6.jpg") no-repeat center center;
+	background-size: cover;
+	border-bottom: 1px solid black; 
+	position: relative;
+	/*margin-bottom: 30px;*/
+}
+.cover {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	top: 0;
+	left: 0;
+	opacity: .75;
+}
+#showcase .row {
+	height: 600px;
+}
+#showcase h1 {
+	font-size: 50px;
+	margin: 0;
+	padding-bottom: 20px;
+}
+#showcase p {
+	color: white;
+	margin: 0;
+	font-size: 23px;
+	font-weight: bold;
+	text-shadow: 0 2px 2px #000;
+}
+#showcase .showcase-content {
+	color: #fff;
+	padding: 40px;
+	opacity: 0.9;
+}
+.glitch {
+  color: #ff6f02;
+  font-size: 75px;
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
+  text-shadow: 0 5px 5px #000;
+}
+/*Twitter feed*/
+#twitter-div{
+	height: 600px;
+	overflow: scroll;
+}
+/*Newsfeed*/
+#newsfeed-div {
+	margin-top: 30px;
+}
+.trending-div {
+	text-align: center;
+	border-bottom: solid 1px black;
+	width: 100%;
+	background-color: #f4f6f9;
+}
+#container-trending {
+	background-color: #f4f6f9;
+	opacity: 0.9;
+}
+/* STATS PAGE*/
+#score-container {
+	overflow:hidden;
+	margin: 0 auto;
+	align-content:center;
+	justify-content: center;
+}
+#scores-div {
+	display: flex;
+	align-content:center;
+	justify-content: center;
+	flex-direction: column;
+}
+#player1-info-div, #player2-info-div {
+	font-size: .8em;
+	margin-right: 7%;
+	line-height: 1.5em; 
+	color: #333;
+}
+
+#playerStats {
+	display: flex;
+	border-bottom: 1px solid black; 
+}
+#playerStats h2 {
+	font-size: 35px;
+	padding-bottom: 20px;
+}
+#playerStats p {
+	color: #ccc;
+	margin: 0;
+};
+#playerStats .stats-content {
+	background-color: #333;
+	color: #fff;
+	border-radius: 90px;
+	padding: 40px;
+	opacity: 0.9;
+}
+
+.div-table {
+	display:table;
+}
+.div-row {
+	display:table-row;
+}
+.div-cell {
+	display:table-cell;
+	text-align:left;
+	padding:6px;
+	font-size: 13px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+.div-cell-right{
+	display: table-cell;
+	text-align:right;
+	font-size: 13px;	
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+#submitForm {
+	font-size: 20px;
+	width: 200px;
+}
+.graphController {
+	font-size: 20px;
+	width: 170px;
+	height: 40px;
+}
+#browsers, #browsers2 {
+	width:100%;
+	height: 30px;
+	font-size: 20px;
+	background-color: #000066;
+	color: white
+}
+#player {
+	text-align: center;
+}
+#statistics {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+#secondSearch {
+	margin-top:10px;
+	padding: 0;
+	vertical-align: center;
+	font-size: 20px;
+}
+#bigSearch {
+	text-align: center;
+	margin-top: 10px;
+	height: 50px;
+	font-size: 30px;
+	width: 600px;
+}
+#last-game {
+	width: 280px;
+	margin-right: 20px;
+}
+
+/* FEATURES */
+#features {
+	background-color: #f4f6f9;
+}
+#features h2 {
+	font-size: 35px;
+	margin: 0;
+	padding-bottom: 10px;
+	padding-top: 20px;
+}
+#features p {
+	color: #888;
+	margin: 0;
+}
+#features .fa {
+	font-size: 60px;
+	color: #000066;
+}
+/* INFO */
+#info {
+	color: #fff;
+}
+#info h2 {
+	font-size: 35px;
+	margin: 0;
+	padding-bottom: 10px;
+}
+#info ul {
+	list-style: none;
+	padding: 0; 
+}
+#info li {
+	line-height: 2em;
+	font-size: 20px;
+}
+
+/* FOOTER */
+#main-footer {
+	display: flex;
+	align-items: center;
+	justify-content: center; 
+	background: #000066;
+	color: grey;
+	width: 100%;
+	height: 5%;
+}
+#login-page-footer {
+	position: fixed;
+}
+
+/*MY ACCOUNT FORM*/
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #FFA500;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+#signupbtn {
+    width: 25%;
+    background-color: #FFA500;
+}
+#gohomebtn, #searchbtn {
+    width: 25%;
+    font-size: 15px;
+} 
+
+/* Add padding to container elements */
+.signup-form {
+    padding: 40px;
+    margin-top: 30px;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.login-content {
+	flex: 1;
+}
+#login-text {
+	font-size: 13px;
+}
+#login {
+	color: #FFA500;
+	font-weight: bold;
+}
+
+/*Modal Window*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content, .search-modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+/* Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.close-search {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close-search:hover,
+.close-search:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Search Modal*/
+#search-input {
+	width: 40%;
+}
+
+#logout-text {
+	margin-top: 100px;
+}
+.clearfix {
+	clear: both;
+}
+.main-div {
+	float:left;
+	width:280px;
+	border: 1px solid #000666;
+	margin:5px;
+	margin-left: 30px;
+	padding:5px;
+	height: 75px;
+	line-height: .5em;
+	text-align: center;
+	border-style: ridge;
+	background-color: #a2a2a5;
+}
+.date-div {
+	font-weight: bold;
+	color: #ff6f02;
+}
+#trending-p {
+	font-weight: bold;
+	color: #484b4f;
+	padding-top: 20px;
+	text-align: center;
+}
+#trending-span {
+	font-style: italic;
+} 
+#coming-soon-div {
+	margin-top: 200px; 
+	font-weight: bold;
+	font-style: italic;
+}
+#statistics {
+	width: 60%;
+	padding-left: 5%;
+}
+#info-div {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+}
+#points-div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 10%;
+}
+#playerPage {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 10%;
+}
+#page {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 8%;	
+}
+.signup-container {
+	display: flex;
+	width: 40%;
+	align-items: center;
+	justify-content: center;
+}
+.signup-form {
+	text-align: center;
+}
+.login-content {
+	display: flex;
+	width: 40%;
+	align-items: center;
+	justify-content: center;
+}
+#loginbtn {
+	width: 25%;
+}
+
+/* MEDIA QUEIRIES */
+@media screen and (max-width: 500px) {
+	#showcase .showcase-content {
+		padding: 40px 10px;
+	}
+}
+@media all and (min-width: 501px) and (max-width: 1024px) {
+	#newsfeed-div {
+		margin-left: 20px; 		
+	}
+	#twitter-div {
+		margin-right: 20px; 
+		margin-top: 20px; 										
+	}
+	#signupbtn {
+		width: 35%;
+	}
+}
+@media all and (min-width: 1025px) and (max-width: 1280px) {
+}

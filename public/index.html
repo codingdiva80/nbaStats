@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NBA Stats</title>
+	<link rel="stylesheet" type="text/css" href="/assets/css/flexboxgrid.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+</head>
+<body>
+	<div id="wrapper">
+	<!-- HEADER -->
+	<header id="main-header">
+		<div class="container"> 
+			<div class="row end-sm end-md end-lg center-xs middle-xs middle-sm middle-md middle-lg">
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+				</div>
+				<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">	
+					<nav id="navbar">
+						<ul>
+							<li  class="current"><a href="index.html">Home</a></li>
+							<li><a href="stats.html">Stats</a></li>
+							<li id="signup"><a href="signup">Signup</a></li>
+							<li id="login-link"><a href="login">Login</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>			
+		</div>
+	</header>
+
+	<!-- SHOWCASE -->
+	<section id="showcase">
+		<div class="cover">test</div>
+		<div class="container">
+			<div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 showcase-content">
+					<span class="glitch" data-text="nba">nbaStats</span>
+					<p>latest news and stats about basketball</p>
+				</div>
+			</div>
+		</div>		
+	</section>
+
+	<!-- TRENDING -->
+	<section id="features" class="trending-div">
+		<div id="container-trending">
+			<div class="row center-xs center-sm center-md center-lg">
+				<!-- NEWS --> 					
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+					<div id="newsfeed-div">
+						<!-- start sw-rss-feed code --> 
+						<script type="text/javascript"> 
+						<!-- 
+						rssfeed_url = new Array(); 
+						rssfeed_url[0]="http://www.espn.com/espn/rss/nba/news";  
+						rssfeed_frame_width="300"; 
+						rssfeed_frame_height="600"; 
+						rssfeed_scroll="on"; 
+						rssfeed_scroll_step="6"; 
+						rssfeed_scroll_bar="off"; 
+						rssfeed_target="_blank"; 
+						rssfeed_font_size="12"; 
+						rssfeed_font_face=""; 
+						rssfeed_border="on"; 
+						rssfeed_css_url=""; 
+						rssfeed_title="on"; 
+						rssfeed_title_name="NBA News"; 
+						rssfeed_title_bgcolor="#000066"; 
+						rssfeed_title_color="#fff"; 
+						rssfeed_title_bgimage=""; 
+						rssfeed_footer="off"; 
+						rssfeed_footer_name="rss feed"; 
+						rssfeed_footer_bgcolor="#fff"; 
+						rssfeed_footer_color="#333"; 
+						rssfeed_footer_bgimage=""; 
+						rssfeed_item_title_length="50"; 
+						rssfeed_item_title_color="#666"; 
+						rssfeed_item_bgcolor="#fff"; 
+						rssfeed_item_bgimage=""; 
+						rssfeed_item_border_bottom="on"; 
+						rssfeed_item_source_icon="off"; 
+						rssfeed_item_date="off"; 
+						rssfeed_item_description="on"; 
+						rssfeed_item_description_length="200"; 
+						rssfeed_item_description_color="#666"; 
+						rssfeed_item_description_link_color="#333"; 
+						rssfeed_item_description_tag="off"; 
+						rssfeed_no_items="0"; 
+						rssfeed_cache = "52dd1f77ca84a413841bc70fb1673ff0"; 
+						//--> 
+						</script> 
+						<script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script> 
+						<!-- end sw-rss-feed code -->
+					</div>
+				</div>
+				<!-- SHOWCASE IMAGE -->
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="row center-xs center-sm center-md center-lg">
+						
+						<div id="score-container">
+								<div>
+										<p></p>
+										<p id="trending-p">LATEST NEWS AND SCORES:<br><span id="trending-span">Trending Now</span></p>
+									</div>
+							<div id="scores-div"></div>
+						</div>
+						<div class="clearfix"></div>
+					</div>	
+				</div>
+				<!-- TWITTER -->
+				<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+					<div id="twitter-div">
+						<a class="twitter-timeline" href="https://twitter.com/NBA?ref_src=twsrc%5Etfw">Tweets by NBA</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					</div>
+				</div>
+			</div>
+		</div>				
+	</section>
+
+	<!-- FOOTER -->
+	<footer id="main-footer">
+		<p>Copyright &copy; 2018 | NBA Stats</p>
+	</footer>
+	
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/js/main.js"></script>
+	<script type="text/javascript" src="assets/js/account.js"></script>
+
+	<script type="text/javascript">
+		function checkLoginStatus() {
+			if(localStorage.getItem('loggedin') === "true") {
+				$("#signup").html('<a href="/account">Account</a>');
+				$("#login-link").html('<a href="/logout">Logout</a>');	
+			}
+		}
+		checkLoginStatus();
+		
+	</script>
+	<script type="text/javascript" src="assets/js/nba_stats_api.js"></script>
+	<script type="text/javascript">
+		var nbaStatsAPI = new NbaStatsAPI();
+		nbaStatsAPI.displayScores('scores-div');
+	</script>
+</div>
+</body>
+</html>

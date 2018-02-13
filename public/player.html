@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NBA Stats</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/flexboxgrid.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"></script>
+</head>
+<body>
+	<!-- HEADER -->
+	<header id="main-header">
+		<div class="container"> 
+		<div class="row end-sm end-md end-lg center-xs middle-xs middle-sm middle-md middle-lg">
+			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+			</div>
+			<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">	
+				<nav id="navbar">
+					<ul>
+						<li><input type="search" placeholder="Search Player" id="searchBar"></li>
+						<li><a href="index.html">Home</a></li>
+						<li class="current"><a href="player.html">Player Stats</li>
+						<li>
+							<div class="dropdown">
+								<a href="#" class="dropbtn">Features</a>
+								<div id="dropdown-content">
+									<a href="#">Highlights</a>
+    								<a href="#">Chat</a>
+   									<a href="#">Astrological Predictions</a>
+								</div>
+							</div>
+						</li>
+						<li><a href="contact.html">Sign Up</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>			
+		</div>
+	</header>
+
+	<!-- Player Info -->
+	<section id="playerStats">
+		<div  class="container" id='playerPage'>
+			<div class="row">
+				<div class="col-xs-0 col-sm-1 col-md-1 col-lg-1"></div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" id="player">
+					<h2>Stephen Curry</h2>
+					<img src="http://a.espncdn.com/i/infographics/20151124_warriors/warriors4d.png">
+					<h2>Golden State Warriors</h2>
+				</div>
+				<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5" id="statistics">
+					<h1 id="currentChart">Points</h1>
+					<div class="row">
+						<canvas id="myChart" height="600px" width="600px"></canvas>
+					</div>
+					<div id="secondSearch">
+						Search Players
+					</div>
+					<div>
+						<input type="search" name="search" id="bigSearch">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+					<div>
+						<h1>Last Game</h1>
+						<h3>Player Name</h3>
+						<table>
+							<tr id="catagories">
+								<th>Points</th>
+								<th>Assists</th>
+								<th>Rebounds</th>
+								<th>Steals</th>
+								<th>Blocks</th>
+							</tr>
+							<tr id="numbers">
+								<td>30</td>
+								<td>10</td>
+								<td>10</td>
+								<td>5</td>
+								<td>4</td>
+							</tr>
+						</table>
+					</div>
+					<div id="buttonList">
+						<button class="graphController">Points</button>
+						<button class="graphController">Rebounds</button>
+						<button class="graphController">Assists</button>
+						<button class="graphController">Steals</button>
+						<button class="graphController">Blocks</button>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</section>
+	<!-- FOOTER -->
+	<footer id="main-footer">
+		<div class="container">
+			<div class="row center-xs center-sm center-md center-lg">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<p>Copyright &copy; 2017 | NBA Stats</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="./assets/js/main.js"></script>
+
+</body>
+</html>
